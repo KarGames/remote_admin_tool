@@ -5,7 +5,7 @@ import subprocess
 host = socket.gethostbyname(socket.gethostname())
 port = 9090
 
-client = socket.socket()
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 client.connect((host, port))
 print("Connected to Server!")
